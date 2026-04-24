@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyse des Risques – HAS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Analyse des Risques – Benchmark HAS</h1>
+</header>
+
+<main>
+
+    <section id="page1" class="page">
+        <h2>1. Sélection du professionnel</h2>
+        <select id="professionnel">
+            <option value="">-- Choisir --</option>
+            <option>Kevin</option>
+            <option>Sophie</option>
+            <option>Francine</option>
+            <option>Antonin</option>
+        </select>
+        <button class="btn" onclick="goToPage2()">Suivant</button>
+    </section>
+
+    <section id="page2" class="page hidden">
+        <h2>2. Type de risque (HAS)</h2>
+        <select id="risqueType">
+            <option value="">-- Choisir --</option>
+            <option>Nucléaire</option>
+            <option>Environnemental</option>
+            <option>Psycho-sociaux</option>
+            <option>Humain</option>
+        </select>
+        <button class="btn" onclick="goToPage3()">Suivant</button>
+    </section>
+
+    <section id="page3" class="page hidden">
+        <h2>3. Jeune concerné</h2>
+        <select id="jeune">
+            <option value="">-- Choisir --</option>
+            <option>Tina</option>
+            <option>Flavien</option>
+            <option>Maolan</option>
+            <option>Marie</option>
+        </select>
+        <button class="btn" onclick="goToPage4()">Suivant</button>
+    </section>
+
+    <section id="page4" class="page hidden">
+        <h2>4. Sous-risques</h2>
+        <div id="checkboxContainer"></div>
+        <button class="btn" onclick="generateTable()">Générer le tableau final</button>
+    </section>
+
+    <section id="page5" class="page hidden">
+        <h2>Tableau récapitulatif</h2>
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Professionnel</th>
+                    <th>Type de risque</th>
+                    <th>Jeune</th>
+                    <th>Sous-risque</th>
+                    <th>Protocole HAS</th>
+                    <th>Fréquence</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
